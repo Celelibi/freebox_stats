@@ -48,7 +48,7 @@ class StatsPage(object):
             return self._uptime
 
         infocontent = self.sections['Informations générales']
-        bootupre = re.compile('Temps depuis la mise en route\s*(?:(\d+) jours?,)?\s*(?:(\d+) heures?,)?\s*(\d+) minutes?')
+        bootupre = re.compile(r'Temps depuis la mise en route\s*(?:(\d+) jours?,)?\s*(?:(\d+) heures?,)?\s*(\d+) minutes?')
         match = bootupre.search(infocontent)
         days, hours, minutes = match.groups()
 
